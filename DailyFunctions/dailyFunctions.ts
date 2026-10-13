@@ -44,6 +44,7 @@ class CommonFunctions {
         this.reverseArray(arr);
         return arr.join("");
     }
+    //Day 02 - OCT 13
     returnTheOccurrance(str: string): Map<string, number> {
         let occurance = new Map<string, number>();
         let arr = str.split(" ");
