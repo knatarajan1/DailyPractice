@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "buildandRunTestFile": "npx tsc && node dist/CallingMethod/TestingClass.js"
+    "buildandRunTestFile": "npx tsc && node dist/CallingMethod/TestingClass.js",
+    "buildTestTSFile":"npx tsx CallingMethod/TestingClass.ts"
   },
   "keywords": [],
   "author": "",

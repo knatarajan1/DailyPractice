@@ -30,19 +30,32 @@ class CommonFunctions {
         }
     }
 
-    reverseArray<T>(arr:Array<T>):void{
+    reverseArray<T>(arr: Array<T>): void {
         let left = 0;
-        let right = arr.length-1;
-        while(left<right){
-            [arr[left],arr[right]]=[arr[right]!,arr[left]!]
+        let right = arr.length - 1;
+        while (left < right) {
+            [arr[left], arr[right]] = [arr[right]!, arr[left]!]
             left++;
             right--;
         }
     }
-    reverseString(str:string):string{
+    reverseString(str: string): string {
         let arr = str.split("");
         this.reverseArray(arr);
         return arr.join("");
+    }
+    returnTheOccurrance(str: string): Map<string, number> {
+        let occurance = new Map<string, number>();
+        let arr = str.split(" ");
+        arr.forEach((a) => {
+            occurance.set(a, (occurance.get(a) ?? 0) + 1);
+        });
+        return occurance;
+    }
+    sortedMap(map: Map<string, number>): Map<string, number> {
+        let arr = Array.from(map);
+        arr.sort((a, b) => a[1] - b[1]);
+        return new Map<string, number>(arr);
     }
 }
 
