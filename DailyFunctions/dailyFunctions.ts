@@ -2,7 +2,7 @@
 
 class CommonFunctions {
     constructor() { }
-    //Day 01 - OCT 12
+    //DAY 01 - OCT 12
     sortArrayAsc(arr: number[]): void {
         let arrLength = arr.length;
         for (let i = 0; i <= arrLength; i++) {
@@ -44,7 +44,9 @@ class CommonFunctions {
         this.reverseArray(arr);
         return arr.join("");
     }
-    //Day 02 - OCT 13
+
+    //DAY 02 - OCT 13
+
     returnTheOccurrance(str: string): Map<string, number> {
         let occurance = new Map<string, number>();
         let arr = str.split(" ");
@@ -57,6 +59,25 @@ class CommonFunctions {
         let arr = Array.from(map);
         arr.sort((a, b) => a[1] - b[1]);
         return new Map<string, number>(arr);
+    }
+
+
+    //DAY 03 -OCT 14
+    removeWhiteSpace(str: string): string {
+        return str.replace(/\s/g, "");
+    }
+
+    swapCharachterCase(a: string): string {
+        let charCode = a.charCodeAt(0);
+        if (charCode >= 65 && charCode <= 90) { a = String.fromCharCode(charCode + 32); }
+        else if (charCode >= 97 && charCode <= 122) { a = String.fromCharCode(charCode - 32); }
+        else
+            a = a;
+        return a;
+    }
+
+    swapCase(str: string): string {
+        return [...str].map((a)=>this.swapCharachterCase(a)).join("");
     }
 }
 

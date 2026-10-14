@@ -36,4 +36,13 @@ class TestClass {
         return {Highest:allHighest.join(","),Lowest:allLowest.join(",")}
     }
 
+    validateRemoveWhiteSpace(str:string):string{
+        return this.helper.removeWhiteSpace(str);
+    }
+    
+    validateSwapEachCase(str:string):string{
+        return this.helper.swapCase(str);
+    }
+
 } export = TestClass;
+
