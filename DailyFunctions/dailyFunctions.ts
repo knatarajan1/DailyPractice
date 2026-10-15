@@ -77,7 +77,62 @@ class CommonFunctions {
     }
 
     swapCase(str: string): string {
-        return [...str].map((a)=>this.swapCharachterCase(a)).join("");
+        return [...str].map((a) => this.swapCharachterCase(a)).join("");
+    }
+
+
+    //DAY04 - OCT15
+    isTwoArraysSame<T>(arr1: Array<T>, arr2: Array<T>): boolean {
+        let isArraySame = true;
+        if (arr1.length !== arr2.length) return false;
+        let len = arr1.length;
+        let newArr1 = arr1.toSorted();
+        let newArr2 = arr2.toSorted();
+        for (let i = 0; i <= len - 1; i++) {
+            if (newArr1[i] !== newArr2[i]) {
+                isArraySame = false;
+                break;
+            }
+        }
+        return isArraySame;
+    }
+
+    isAnagram(str1: string, str2: string): boolean {
+        if (str1.length != str2.length) return false;
+        let isAnagram = true;
+        let str1Occurance = new Map<string, number>();
+        let str2Occurance = new Map<string, number>();
+        str1.split("").forEach((a) => {
+            str1Occurance.set(a, (str1Occurance.get(a) ?? 0) + 1)
+        });
+        str2.split("").forEach((a) => {
+            str2Occurance.set(a, (str2Occurance.get(a) ?? 0) + 1)
+        });
+        let str1Map: Map<string, number> = this.sortedMap(str1Occurance);
+        let str2Map: Map<string, number> = this.sortedMap(str2Occurance);
+        for(const [key,value] of str1Map.entries()){
+            if(str2Map.get(key)!==value){
+                isAnagram=false;
+                break;
+            }
+        }
+        return isAnagram;
+    }
+
+    isPalindrome(str:string,):boolean{
+        let isPalidnrome = true;
+        let arr = [...str]
+        let left =0;
+        let right = arr.length-1;
+        while(left<right){
+            if(arr[left]!==arr[right]){
+                isPalidnrome=false;
+                break;
+            }
+            left++;
+            right--;
+        }
+        return isPalidnrome;
     }
 }
 

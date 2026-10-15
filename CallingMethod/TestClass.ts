@@ -44,5 +44,23 @@ class TestClass {
         return this.helper.swapCase(str);
     }
 
+    validateTwoArraysAreSame<T>(arr1:T[],arr2:T[]):void{
+        console.log("Array 1 : ",arr1);
+        console.log("Array 2 : ",arr2);
+        console.log("Is Both Arrays are same:", this.helper.isTwoArraysSame(arr1,arr2));
+    }
+
+    validateTwoStringsAreAnagrams(str1:string,str2:string):void{
+        console.log("String 1 : ",str1);
+        console.log("String 2 : ",str2);
+        console.log("Is Both Strings are anagrams:", this.helper.isAnagram(str1,str2));
+    }
+
+    validateisStringPalindrome(str:string):void{
+        console.log("Str : ",str);
+        console.log("reverse string: ",this.helper.reverseString(str));
+        console.log("Is Palindrome: ",this.helper.isPalindrome(str));
+    }
+
 } export = TestClass;
 
