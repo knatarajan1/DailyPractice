@@ -227,3 +227,149 @@ test.validateisStringPalindrome(p24);
 test.validateisStringPalindrome(p25);
 
 console.log("*".repeat(200))
+
+// Happy path
+const capitalizeEachWordA1 = "validate capitalize EachWord";
+const capitalizeEachWordA2 = "hello world";
+const capitalizeEachWordA3 = "typescript";
+const capitalizeEachWordA4 = "the quick brown fox";
+const capitalizeEachWordA5 = "a b c";
+const capitalizeEachWordA6 = "Hello World";
+
+// Casing of the rest of the word
+const capitalizeEachWordA7 = "hELLO wORLD";
+const capitalizeEachWordA8 = "HELLO";
+const capitalizeEachWordA9 = "iPhone user";
+
+// Whitespace
+const capitalizeEachWordA10 = "";
+const capitalizeEachWordA11 = "   ";
+const capitalizeEachWordA12 = "  hello world  ";
+const capitalizeEachWordA13 = "hello   world";
+const capitalizeEachWordA14 = "hello\tworld";
+const capitalizeEachWordA15 = "hello\nworld";
+
+// Non-letter starts
+const capitalizeEachWordA16 = "123 abc";
+const capitalizeEachWordA17 = "hello 2world";
+const capitalizeEachWordA18 = "!hello";
+const capitalizeEachWordA19 = "(hello) world";
+
+// Punctuation inside words
+const capitalizeEachWordA20 = "don't stop";
+const capitalizeEachWordA21 = "mother-in-law";
+const capitalizeEachWordA22 = "hello,world";
+const capitalizeEachWordA23 = "o'brien";
+
+// Unicode
+const capitalizeEachWordA24 = "élan vital";
+const capitalizeEachWordA25 = "வணக்கம் world";
+const capitalizeEachWordA26 = "😀 hello";
+
+// Calls
+test.validateCapitalizeEachWord(capitalizeEachWordA1);
+test.validateCapitalizeEachWord(capitalizeEachWordA2);
+test.validateCapitalizeEachWord(capitalizeEachWordA3);
+test.validateCapitalizeEachWord(capitalizeEachWordA4);
+test.validateCapitalizeEachWord(capitalizeEachWordA5);
+test.validateCapitalizeEachWord(capitalizeEachWordA6);
+test.validateCapitalizeEachWord(capitalizeEachWordA7);
+test.validateCapitalizeEachWord(capitalizeEachWordA8);
+test.validateCapitalizeEachWord(capitalizeEachWordA9);
+test.validateCapitalizeEachWord(capitalizeEachWordA10);
+test.validateCapitalizeEachWord(capitalizeEachWordA11);
+test.validateCapitalizeEachWord(capitalizeEachWordA12);
+test.validateCapitalizeEachWord(capitalizeEachWordA13);
+test.validateCapitalizeEachWord(capitalizeEachWordA14);
+test.validateCapitalizeEachWord(capitalizeEachWordA15);
+test.validateCapitalizeEachWord(capitalizeEachWordA16);
+test.validateCapitalizeEachWord(capitalizeEachWordA17);
+test.validateCapitalizeEachWord(capitalizeEachWordA18);
+test.validateCapitalizeEachWord(capitalizeEachWordA19);
+test.validateCapitalizeEachWord(capitalizeEachWordA20);
+test.validateCapitalizeEachWord(capitalizeEachWordA21);
+test.validateCapitalizeEachWord(capitalizeEachWordA22);
+test.validateCapitalizeEachWord(capitalizeEachWordA23);
+test.validateCapitalizeEachWord(capitalizeEachWordA24);
+test.validateCapitalizeEachWord(capitalizeEachWordA25);
+test.validateCapitalizeEachWord(capitalizeEachWordA26);
+console.log("*".repeat(200))
+// Happy path
+const mergingTwoWordsA1W1 = "hello";
+const mergingTwoWordsA1W2 = "world";
+const mergingTwoWordsA2W1 = "Type";
+const mergingTwoWordsA2W2 = "Script";
+const mergingTwoWordsA3W1 = "a";
+const mergingTwoWordsA3W2 = "b";
+const mergingTwoWordsA4W1 = "hello";
+const mergingTwoWordsA4W2 = "hello";
+
+// Empty inputs
+const mergingTwoWordsA5W1 = "";
+const mergingTwoWordsA5W2 = "world";
+const mergingTwoWordsA6W1 = "hello";
+const mergingTwoWordsA6W2 = "";
+const mergingTwoWordsA7W1 = "";
+const mergingTwoWordsA7W2 = "";
+
+// Whitespace
+const mergingTwoWordsA8W1 = " ";
+const mergingTwoWordsA8W2 = "world";
+const mergingTwoWordsA9W1 = "hello ";
+const mergingTwoWordsA9W2 = " world";
+const mergingTwoWordsA10W1 = "hello\t";
+const mergingTwoWordsA10W2 = "world";
+const mergingTwoWordsA11W1 = "hello world";
+const mergingTwoWordsA11W2 = "foo";
+
+// Numbers as strings
+const mergingTwoWordsA12W1 = "123";
+const mergingTwoWordsA12W2 = "456";
+const mergingTwoWordsA13W1 = "1";
+const mergingTwoWordsA13W2 = "2";
+
+// Casing and punctuation
+const mergingTwoWordsA14W1 = "HELLO";
+const mergingTwoWordsA14W2 = "world";
+const mergingTwoWordsA15W1 = "don't";
+const mergingTwoWordsA15W2 = "stop";
+const mergingTwoWordsA16W1 = "!";
+const mergingTwoWordsA16W2 = "?";
+
+// Unicode
+const mergingTwoWordsA17W1 = "élan";
+const mergingTwoWordsA17W2 = "vital";
+const mergingTwoWordsA18W1 = "வணக்கம்";
+const mergingTwoWordsA18W2 = "உலகம்";
+const mergingTwoWordsA19W1 = "😀";
+const mergingTwoWordsA19W2 = "😃";
+const mergingTwoWordsA20W1 = "e";
+const mergingTwoWordsA20W2 = "\u0301";
+
+// Long input
+const mergingTwoWordsA21W1 = "a".repeat(10000);
+const mergingTwoWordsA21W2 = "b".repeat(10000);
+
+// Calls
+test.validateMergingTwoWords(mergingTwoWordsA1W1, mergingTwoWordsA1W2);
+test.validateMergingTwoWords(mergingTwoWordsA2W1, mergingTwoWordsA2W2);
+test.validateMergingTwoWords(mergingTwoWordsA3W1, mergingTwoWordsA3W2);
+test.validateMergingTwoWords(mergingTwoWordsA4W1, mergingTwoWordsA4W2);
+test.validateMergingTwoWords(mergingTwoWordsA5W1, mergingTwoWordsA5W2);
+test.validateMergingTwoWords(mergingTwoWordsA6W1, mergingTwoWordsA6W2);
+test.validateMergingTwoWords(mergingTwoWordsA7W1, mergingTwoWordsA7W2);
+test.validateMergingTwoWords(mergingTwoWordsA8W1, mergingTwoWordsA8W2);
+test.validateMergingTwoWords(mergingTwoWordsA9W1, mergingTwoWordsA9W2);
+test.validateMergingTwoWords(mergingTwoWordsA10W1, mergingTwoWordsA10W2);
+test.validateMergingTwoWords(mergingTwoWordsA11W1, mergingTwoWordsA11W2);
+test.validateMergingTwoWords(mergingTwoWordsA12W1, mergingTwoWordsA12W2);
+test.validateMergingTwoWords(mergingTwoWordsA13W1, mergingTwoWordsA13W2);
+test.validateMergingTwoWords(mergingTwoWordsA14W1, mergingTwoWordsA14W2);
+test.validateMergingTwoWords(mergingTwoWordsA15W1, mergingTwoWordsA15W2);
+test.validateMergingTwoWords(mergingTwoWordsA16W1, mergingTwoWordsA16W2);
+test.validateMergingTwoWords(mergingTwoWordsA17W1, mergingTwoWordsA17W2);
+test.validateMergingTwoWords(mergingTwoWordsA18W1, mergingTwoWordsA18W2);
+test.validateMergingTwoWords(mergingTwoWordsA19W1, mergingTwoWordsA19W2);
+test.validateMergingTwoWords(mergingTwoWordsA20W1, mergingTwoWordsA20W2);
+test.validateMergingTwoWords(mergingTwoWordsA21W1, mergingTwoWordsA21W2);
+console.log("*".repeat(200))

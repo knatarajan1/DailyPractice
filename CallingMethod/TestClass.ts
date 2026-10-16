@@ -62,5 +62,14 @@ class TestClass {
         console.log("Is Palindrome: ",this.helper.isPalindrome(str));
     }
 
+    validateCapitalizeEachWord(str:string):void{
+        console.log("String before capitalizing:",str);
+        console.log("String after capitalizing:",this.helper.capitaliseEachWord(str));
+    }
+    validateMergingTwoWords(str1:string,str2:string):void{
+        console.log("Strings before Merging:",str1,str2);
+        console.log("Strings After Merging:",this.helper.mergeStringsAlternatively(str1,str2));
+    }
+
 } export = TestClass;
 

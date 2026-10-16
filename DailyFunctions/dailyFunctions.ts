@@ -134,6 +134,29 @@ class CommonFunctions {
         }
         return isPalidnrome;
     }
+    //DAY05-OCT16
+    functionForCapitalising(str:string):string{
+        let returnString = "";
+        returnString = str.at(0)?.toUpperCase().concat(str.slice(1))!;
+        return returnString;
+    }
+
+     capitaliseEachWord(str:string):string{
+        return str.split(/\s/).map((word)=>{return word.at(0)?.toUpperCase().concat(word.slice(1))}).join(" ");
+     }
+
+     mergeStringsAlternatively(str1:string,str2:string):string{
+        let mergedWord="";
+        let maxLen = Math.max(str1.length,str2.length);
+        let i=0;
+        while(i<maxLen){
+            let str1Char = str1.at(i)??"";
+            let str2Char = str2.at(i)??"";
+            mergedWord+=str1Char.concat(str2Char);
+            i++;
+        }
+        return mergedWord;
+     }
 }
 
 export = CommonFunctions;
