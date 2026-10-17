@@ -70,6 +70,12 @@ class TestClass {
         console.log("Strings before Merging:",str1,str2);
         console.log("Strings After Merging:",this.helper.mergeStringsAlternatively(str1,str2));
     }
+    validateSentenceToCamelCase(str:string):void{
+        console.log("Sentence before converting to camel case:",str);
+        console.log("Sentence after converting to camel case:",this.helper.sentenceToCamelCase(str));
+        console.log("Sentence after converting to Kabab case:",this.helper.camelCaseToKababCase(this.helper.sentenceToCamelCase(str)))
+    }
+
 
 } export = TestClass;
 

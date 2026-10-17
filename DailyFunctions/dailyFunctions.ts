@@ -110,23 +110,23 @@ class CommonFunctions {
         });
         let str1Map: Map<string, number> = this.sortedMap(str1Occurance);
         let str2Map: Map<string, number> = this.sortedMap(str2Occurance);
-        for(const [key,value] of str1Map.entries()){
-            if(str2Map.get(key)!==value){
-                isAnagram=false;
+        for (const [key, value] of str1Map.entries()) {
+            if (str2Map.get(key) !== value) {
+                isAnagram = false;
                 break;
             }
         }
         return isAnagram;
     }
 
-    isPalindrome(str:string,):boolean{
+    isPalindrome(str: string,): boolean {
         let isPalidnrome = true;
         let arr = [...str]
-        let left =0;
-        let right = arr.length-1;
-        while(left<right){
-            if(arr[left]!==arr[right]){
-                isPalidnrome=false;
+        let left = 0;
+        let right = arr.length - 1;
+        while (left < right) {
+            if (arr[left] !== arr[right]) {
+                isPalidnrome = false;
                 break;
             }
             left++;
@@ -135,28 +135,50 @@ class CommonFunctions {
         return isPalidnrome;
     }
     //DAY05-OCT16
-    functionForCapitalising(str:string):string{
+    functionForCapitalising(str: string): string {
         let returnString = "";
         returnString = str.at(0)?.toUpperCase().concat(str.slice(1))!;
         return returnString;
     }
 
-     capitaliseEachWord(str:string):string{
-        return str.split(/\s/).map((word)=>{return word.at(0)?.toUpperCase().concat(word.slice(1))}).join(" ");
-     }
+    capitaliseEachWord(str: string): string {
+        return str.split(/\s/).map((word) => { return word.at(0)?.toUpperCase().concat(word.slice(1)) }).join(" ");
+    }
 
-     mergeStringsAlternatively(str1:string,str2:string):string{
-        let mergedWord="";
-        let maxLen = Math.max(str1.length,str2.length);
-        let i=0;
-        while(i<maxLen){
-            let str1Char = str1.at(i)??"";
-            let str2Char = str2.at(i)??"";
-            mergedWord+=str1Char.concat(str2Char);
+    mergeStringsAlternatively(str1: string, str2: string): string {
+        let mergedWord = "";
+        let maxLen = Math.max(str1.length, str2.length);
+        let i = 0;
+        while (i < maxLen) {
+            let str1Char = str1.at(i) ?? "";
+            let str2Char = str2.at(i) ?? "";
+            mergedWord += str1Char.concat(str2Char);
             i++;
         }
         return mergedWord;
-     }
+    }
+    //DAY06-OCT17
+    sentenceToCamelCase(str: string): string {
+        return str.trim().split(/\s/).map((value, index) => {
+            let word = value.toLowerCase();
+            if (index !== 0) {
+                const word = value.toLowerCase();
+                if (index === 0) return word;
+                return (word.at(0)?.toUpperCase() ?? "") + word.slice(1);
+            }
+            return word;
+        }).join("");
+    }
+    camelCaseToKababCase(str: string):string {
+        const arr = [...str];
+        return arr.map((value)=>{
+            let retValue = value;
+            if(value.charCodeAt(0)>=65 && value.charCodeAt(0)<=90)
+                retValue = `-${value.toLowerCase()}`;
+            return retValue;
+        }).join("");
+    }
+
 }
 
 export = CommonFunctions;

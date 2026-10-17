@@ -373,3 +373,92 @@ test.validateMergingTwoWords(mergingTwoWordsA19W1, mergingTwoWordsA19W2);
 test.validateMergingTwoWords(mergingTwoWordsA20W1, mergingTwoWordsA20W2);
 test.validateMergingTwoWords(mergingTwoWordsA21W1, mergingTwoWordsA21W2);
 console.log("*".repeat(200))
+
+// Happy path
+const sentenceToCamelCaseA1 = "hello world";
+const sentenceToCamelCaseA2 = "convert this sentence to camel case";
+const sentenceToCamelCaseA3 = "hello";
+const sentenceToCamelCaseA4 = "a b c";
+
+// Input casing
+const sentenceToCamelCaseA5 = "Hello World";
+const sentenceToCamelCaseA6 = "HELLO WORLD";
+const sentenceToCamelCaseA7 = "hELLO wORLD";
+const sentenceToCamelCaseA8 = "iPhone sales report";
+const sentenceToCamelCaseA9 = "user ID";
+const sentenceToCamelCaseA10 = "XML http request";
+
+// Whitespace
+const sentenceToCamelCaseA11 = "";
+const sentenceToCamelCaseA12 = "   ";
+const sentenceToCamelCaseA13 = "  hello world  ";
+const sentenceToCamelCaseA14 = "hello   world";
+const sentenceToCamelCaseA15 = "hello\tworld";
+const sentenceToCamelCaseA16 = "hello\nworld";
+
+// Punctuation
+const sentenceToCamelCaseA17 = "hello, world!";
+const sentenceToCamelCaseA18 = "don't stop";
+const sentenceToCamelCaseA19 = "user's email address";
+const sentenceToCamelCaseA20 = "mother-in-law";
+const sentenceToCamelCaseA21 = "hello.world";
+
+// Numbers
+const sentenceToCamelCaseA22 = "version 2 release";
+const sentenceToCamelCaseA23 = "top 10 list";
+const sentenceToCamelCaseA24 = "2nd place winner";
+const sentenceToCamelCaseA25 = "123";
+
+// Already in another case style
+const sentenceToCamelCaseA26 = "helloWorld";
+const sentenceToCamelCaseA27 = "HelloWorld";
+const sentenceToCamelCaseA28 = "hello_world";
+const sentenceToCamelCaseA29 = "hello-world";
+
+// Unicode
+const sentenceToCamelCaseA30 = "élan vital";
+const sentenceToCamelCaseA31 = "வணக்கம் உலகம்";
+const sentenceToCamelCaseA32 = "😀 happy day";
+const sentenceToCamelCaseA33 = "hello ßeta";
+const sentenceToCamelCaseA34 = "İstanbul city";
+
+// Long input
+const sentenceToCamelCaseA35 = "word ".repeat(1000);
+
+// Calls
+test.validateSentenceToCamelCase(sentenceToCamelCaseA1);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA2);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA3);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA4);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA5);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA6);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA7);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA8);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA9);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA10);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA11);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA12);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA13);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA14);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA15);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA16);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA17);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA18);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA19);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA20);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA21);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA22);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA23);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA24);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA25);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA26);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA27);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA28);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA29);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA30);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA31);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA32);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA33);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA34);
+test.validateSentenceToCamelCase(sentenceToCamelCaseA35);
+console.log("*".repeat(200))
